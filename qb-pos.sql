@@ -37,22 +37,12 @@ CREATE TABLE IF NOT EXISTS `businesses` (
 INSERT INTO `businesses` (id, name) VALUES (1, 'uwu');
 
 INSERT INTO `business_items` (name, price, businessid) VALUES
-  ('chickenwrap', 100, 1),
-  ('frenchtoast', 100, 1),
-  ('cupcake', 100, 1),
-  ('macarons', 100, 1),
-  ('mochichocolate', 100, 1),
-  ('mochimint', 100, 1),
-  ('mochiraspberry', 100, 1),
-  ('mochitangerine', 100, 1),
-  ('mochivanilla', 100, 1),
-  ('mochiwatermelon', 100, 1),
-  ('ramen', 200, 1),
-  ('bobaraz', 50, 1),
-  ('bobachocolate', 50, 1),
-  ('bobamint', 50, 1),
-  ('bobastrawberry', 50, 1),
-  ('bobavanilla', 50, 1),
-  ('bobawatermelon', 50, 1),
-  ('chaitea', 50, 1),
-  ('waterbottle', 50, 1);
+  ('burger-murdermeal', 100, 1),
+  ('burger-heartstopper', 100, 1),
+  ('burger-bleeder', 100, 1),
+  ('burger-moneyshot', 100, 1),
+  ('burger-torpedo', 100, 1),  
+  ('burger-meatfree', 100, 1),
+  ('burger-fries', 100, 1),
+  ('burger-softdrink', 100, 1),
+  ('burger-mshake', 100, 1);

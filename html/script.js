@@ -21,7 +21,7 @@ function prepareTabletDisplay(data) {
     var rowDiv = mainDiv.append('div').classed('row', true)
     data.items.forEach((item, index) => {
         var coldiv = rowDiv.append('div').classed('col-md-3 product', true).attr('id', item.hash).attr('price', item.price).attr('maxquant', item.quantity);
-        coldiv.append('div').classed('center', true).classed('row', true).append('div').classed('col-md-12', true).append('img').classed('center', true).attr('src', `nui://qb-inventory/html/images/${item.image}`);
+        coldiv.append('div').classed('center', true).classed('row', true).append('div').classed('col-md-12', true).append('img').classed('center', true).attr('src', `nui://lj-inventory/html/images/${item.image}`);
         coldiv.append('div').classed('center', true).classed('row', true).append('div').classed('col-md-12', true).text(item.name);
         if (index % 4 == 3) {
             rowDiv = mainDiv.append('div').classed('row', true);
@@ -36,7 +36,7 @@ function prepareOrders() {
     for (var key in receivedData) {
         var obj = receivedData[key];
         var coldiv = rowDiv.append('div').classed('col-md-4 order', true).attr('id', key);
-        coldiv.append('img').classed('ticket', true).attr('src', `nui://qb-inventory/html/images/${obj.entrantData.businessname}-ticket.png`);
+        coldiv.append('img').classed('ticket', true).attr('src', `nui://lj-inventory/html/images/${obj.entrantData.businessname}-ticket.png`);
         var itemsdiv = rowDiv.append('div').classed('col-md-8 items', true);
         var itemRow = itemsdiv.append('div').classed('row', true);
         for (var itemId in obj.items) {
@@ -189,7 +189,7 @@ function updateCart() {
         if (!cartItems.hasOwnProperty(key)) continue;
         var row = cart.append('div').classed('row', true).attr('id', `cart-${key}`);
         var col = row.append('div').classed('col-md-12', true);
-        col.append('img').attr('src', `nui://qb-inventory/html/images/${key}.png`);
+        col.append('img').attr('src', `nui://lj-inventory/html/images/${key}.png`);
         col.append('span').classed('quantity', true).text(`x${cartItems[key].ordered}`);
         col.append('btn').classed('btn', true).classed('btn-danger', true).attr('id', `item-${key}`).text('Remove');
         row.append('div').classed('col-md-12', true).text(`${cartItems[key].label}`)

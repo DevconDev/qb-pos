@@ -28,7 +28,7 @@ files {
     'html/style2.css',
     'html/San Marino Beach.woff',
     'html/images/*',
-    '@qb-inventory/html/images/*',
+    '@lj-inventory/html/images/*',
 }
 
 lua54 'yes'

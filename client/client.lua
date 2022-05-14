@@ -139,7 +139,7 @@ RegisterNetEvent('qb-pos:client:toggleDuty', function()
     PlayerJob = QBCore.Functions.GetPlayerData().job
     QBCore.Functions.TriggerCallback('qb-pos:server:GetOnDuty', function(onDutyCount)
         if onDutyCount ~= nil then
-            if not PlayerJob.onduty and onDutyCount >= Config.POSJobs[PlayerJob.name].MaxEmployees then
+            if not PlayerJob.onduty and onDutyCount == Config.POSJobs[PlayerJob.name].MaxEmployees then
                 QBCore.Functions.Notify('There are too many employees clocked in currently.', 'error')
             else
                 onDuty = not PlayerJob.onduty

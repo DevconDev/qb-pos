@@ -189,7 +189,7 @@ RegisterNetEvent('qb-pos:server:completeTransaction', function(entrantcitizenid,
                 player.Functions.RemoveMoney('bank', total)
             end
             if canBuy then
-                TriggerEvent('qb-bossmenu:server:addAccountMoney', businessname, math.floor(total*0.75))
+                TriggerEvent('qb-bossmenu:client:SocetyDeposit', businessname, math.floor(total*0.75))
                 TriggerEvent('qb-pos:server:receiveCommission', total, businessname)
                 if selfcheckout then
                     for k,v in pairs(items) do
@@ -341,7 +341,7 @@ RegisterNetEvent('qb-pos:server:washDirtyMoney', function()
             )
             player.Functions.RemoveItem('markedbills', 1)
 			TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['markedbills'], "remove")
-            TriggerEvent('qb-bossmenu:server:addAccountMoney', player.PlayerData.job.name, worth)
+            TriggerEvent('qb-bossmenu:client:SocetyDeposit', player.PlayerData.job.name, worth)
         end
     end
 end)
